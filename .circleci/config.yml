@@ -16,14 +16,22 @@ jobs:
         FASTLANE_LANE: test
     steps:
         - checkout
+        - run:
+            name: Lang prepare
+            command: |
+                export LC_ALL=en_US.UTF-8  
+                export LANG=en_US.UTF-8 
         - restore_cache:
             key: 1-gems-{{ checksum "~/Gemfile.lock" }}
             paths:
                 - vendor/bundle
-        # - run: bundle check || bundle install --path vendor/bundle
+        - run: bundle install --path vendor/bundle
         - run:
             name: Set Ruby Version
             command:  echo "ruby-2.4" > ~/.ruby-version
+        - run:
+            name: Update fastlane
+            command: bundle update fastlane
         - run:  
             name: Fetch CocoaPods Specs
             command: |
