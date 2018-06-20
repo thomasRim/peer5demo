@@ -13,39 +13,23 @@ jobs:
 
     dependencies:
        pre:
-        - sudo ruby-install ruby --HEAD
+        - bundle sudo ruby-install ruby --HEAD
 
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
       - checkout
-      - run: ruby -v
+      - run: bundle exec ruby -v
       - run: git submodule sync
       - run: git submodule update --init --remote
-
-      - restore_cache:
-          key: 1-gems-{{ checksum "Gemfile.lock" }}
-
       - run: bundle check || bundle install --path vendor/bundle
-
-      - save_cache:
-          key: 1-gems-{{ checksum "Gemfile.lock" }}
-          paths:
-              - vendor/bundle
-
-      - restore_cache:
-          key: 1-pods-{{ checksum "Podfile.lock" }}
       - run:
           name: Install CocoaPods
           command: |
               curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+              bundle exec gem install cocoapods
               bundle exec pod install
-      - save_cache:
-          key: 1-pods-{{ checksum "Podfile.lock" }}
-          paths:
-              - ./Pods
-
       # Build the app and run tests
       - run:
           name: Build and run tests
