@@ -25,7 +25,7 @@ jobs:
                 command:  echo "ruby-2.4" > ~/.ruby-version
         - run:
             name: pre-start simulator
-            command: xcrun instruments -w "iPhone 7 (10.2) [" || true
+            command: xcrun instruments -w "iPhone 7 (11.2) [" || true
         - run:
             name: Install CocoaPods
             command: |
