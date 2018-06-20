@@ -28,7 +28,7 @@ jobs:
           name: Install CocoaPods
           command: |
               curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-              chruby $(cat .ruby-version | cut -d '-' -f 2) && pod install
+              chruby $(cat .ruby-version | cut -d '-' -f 2) && sudo gem install cocoapods && pod install
       # Build the app and run tests
       - run:
           name: Build and run tests
