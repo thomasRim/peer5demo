@@ -9,12 +9,14 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.2.0"
+    shell: /bin/bash --login -eo pipefail
 
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
       - checkout
+      - run: bundle exec rvm install ruby-2.4.2
       - run: ruby -v
       - run: git submodule sync
       - run: git submodule update --init --remote
