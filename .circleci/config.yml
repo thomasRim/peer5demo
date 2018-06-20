@@ -16,7 +16,7 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
-      - run: brew upgrade ruby
+      - run: gem update --system
       - run: ruby -v
       - run: git submodule sync
       - run: git submodule update --init --remote
