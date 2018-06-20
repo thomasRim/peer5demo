@@ -19,7 +19,7 @@ jobs:
             key: 1-gems-{{ checksum "~/Gemfile.lock" }}
             paths:
                 - vendor/bundle
-        - run: bundle check || bundle install --path vendor/bundle
+        # - run: bundle check || bundle install --path vendor/bundle
         
         - run:
             name: Set Ruby Version
