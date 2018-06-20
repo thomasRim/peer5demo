@@ -9,11 +9,13 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.2.0"
+      pre:
+        - brew install ruby ; brew link --overwrite ruby
     shell: /bin/bash --login -eo pipefail
 
-    dependencies:
-       pre:
-        - bundle sudo ruby-install ruby --HEAD
+    # dependencies:
+    #    pre:
+    #     - echo "2.3.1" > .ruby-version
 
     environment:
       FL_OUTPUT_DIR: output
@@ -28,7 +30,6 @@ jobs:
           name: Install CocoaPods
           command: |
               curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-              bundle exec gem install cocoapods
               bundle exec pod install
       # Build the app and run tests
       - run:
