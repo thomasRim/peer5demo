@@ -14,8 +14,6 @@ jobs:
       - checkout
 
       # Install CocoaPods
-      - run: sudo gem install cocoapods
-      
       - run:
           name: Install CocoaPods
           command: pod install
