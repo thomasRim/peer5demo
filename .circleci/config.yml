@@ -27,9 +27,9 @@ jobs:
     #         key: 1-gems-{{ checksum "Gemfile.lock" }}
     #         paths:
     #             - vendor/bundle
-    #     - run:
-    #             name: Set Ruby Version
-    #             command:  echo "ruby-2.4" > ~/.ruby-version
+        - run:
+                name: Set Ruby Version
+                command:  echo "ruby-2.4" > ~/.ruby-version
     #     - run:
     #         name: pre-start simulator
     #         command: xcrun instruments -w "iPad Air (11.2)" || true
@@ -49,6 +49,7 @@ jobs:
             name: Fetch CocoaPods Specs
             command: |
                 curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+                chruby $(cat .ruby-version | cut -d '-' -f 2) && sudo gem install cocoapods
         - run:
             name: Install CocoaPods
             command: pod install --verbose
