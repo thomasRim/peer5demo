@@ -16,18 +16,18 @@ jobs:
         FASTLANE_LANE: test
     steps:
         - checkout
+        - run: bundle install --path vendor/bundle
         - run:
             name: Set Ruby Version
             command:  echo "ruby-2.4" > ~/.ruby-version
-
+        - run:
+            name: Update fastlane
+            command: bundle update fastlane
         - run:  
             name: Fetch CocoaPods Specs
             command: |
                 curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
                 chruby $(cat .ruby-version | cut -d '-' -f 2) && sudo gem install cocoapods
-        - run:
-            name: Update fastlane
-            command: bundle update fastlane
         - run:
             name: Install CocoaPods
             command: pod install
