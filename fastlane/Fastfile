@@ -14,6 +14,7 @@ default_platform(:ios)
 platform :ios do
   desc "Runs all the tests"
   lane :test do
+    register_devices(devices_file: "devices.txt")
     scan(
       devices: [
         "iPad Air (11.2)"
