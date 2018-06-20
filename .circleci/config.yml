@@ -16,7 +16,7 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
-      - run: bundle exec rvm install ruby-2.4.2
+      - run: rvm install ruby-2.4.2
       - run: ruby -v
       - run: git submodule sync
       - run: git submodule update --init --remote
