@@ -13,7 +13,18 @@
 		E143090120CECE3800258C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14308FF20CECE3800258C67 /* Main.storyboard */; };
 		E143090320CECE3C00258C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E143090220CECE3C00258C67 /* Assets.xcassets */; };
 		E143090620CECE3C00258C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E143090420CECE3C00258C67 /* LaunchScreen.storyboard */; };
+		E166AB0020DAA6E4008339FA /* PeerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166AAFF20DAA6E4008339FA /* PeerDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E166AB0220DAA6E4008339FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14308F020CECE3800258C67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14308F720CECE3800258C67;
+			remoteInfo = PeerDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2583CEA9F8575D81DB34D877 /* Pods-PeerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeerDemo/Pods-PeerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -25,6 +36,9 @@
 		E143090220CECE3C00258C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E143090520CECE3C00258C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E143090720CECE3C00258C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E166AAFD20DAA6E4008339FA /* PeerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E166AAFF20DAA6E4008339FA /* PeerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerDemoTests.swift; sourceTree = "<group>"; };
+		E166AB0120DAA6E4008339FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8E9A99D3C79DFB1C3F34D75 /* libPods-PeerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -34,6 +48,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5BB7D48B015D32C93E37EBE /* libPods-PeerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E166AAFA20DAA6E4008339FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E14308FA20CECE3800258C67 /* PeerDemo */,
+				E166AAFE20DAA6E4008339FA /* PeerDemoTests */,
 				E14308F920CECE3800258C67 /* Products */,
 				A432A5D786CFFEE5210A61D4 /* Pods */,
 				210073B91B22D1C9026D1EA7 /* Frameworks */,
@@ -71,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E14308F820CECE3800258C67 /* PeerDemo.app */,
+				E166AAFD20DAA6E4008339FA /* PeerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +109,15 @@
 				E143090720CECE3C00258C67 /* Info.plist */,
 			);
 			path = PeerDemo;
+			sourceTree = "<group>";
+		};
+		E166AAFE20DAA6E4008339FA /* PeerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E166AAFF20DAA6E4008339FA /* PeerDemoTests.swift */,
+				E166AB0120DAA6E4008339FA /* Info.plist */,
+			);
+			path = PeerDemoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +142,24 @@
 			productReference = E14308F820CECE3800258C67 /* PeerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E166AAFC20DAA6E4008339FA /* PeerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E166AB0620DAA6E4008339FA /* Build configuration list for PBXNativeTarget "PeerDemoTests" */;
+			buildPhases = (
+				E166AAF920DAA6E4008339FA /* Sources */,
+				E166AAFA20DAA6E4008339FA /* Frameworks */,
+				E166AAFB20DAA6E4008339FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E166AB0320DAA6E4008339FA /* PBXTargetDependency */,
+			);
+			name = PeerDemoTests;
+			productName = PeerDemoTests;
+			productReference = E166AAFD20DAA6E4008339FA /* PeerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +172,10 @@
 				TargetAttributes = {
 					E14308F720CECE3800258C67 = {
 						CreatedOnToolsVersion = 9.4;
+					};
+					E166AAFC20DAA6E4008339FA = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = E14308F720CECE3800258C67;
 					};
 				};
 			};
@@ -139,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				E14308F720CECE3800258C67 /* PeerDemo */,
+				E166AAFC20DAA6E4008339FA /* PeerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +206,13 @@
 				E143090620CECE3C00258C67 /* LaunchScreen.storyboard in Resources */,
 				E143090320CECE3C00258C67 /* Assets.xcassets in Resources */,
 				E143090120CECE3800258C67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E166AAFB20DAA6E4008339FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +267,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E166AAF920DAA6E4008339FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E166AB0020DAA6E4008339FA /* PeerDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E166AB0320DAA6E4008339FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14308F720CECE3800258C67 /* PeerDemo */;
+			targetProxy = E166AB0220DAA6E4008339FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E14308FF20CECE3800258C67 /* Main.storyboard */ = {
@@ -379,6 +457,46 @@
 			};
 			name = Release;
 		};
+		E166AB0420DAA6E4008339FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FLNJKGBZ5;
+				INFOPLIST_FILE = PeerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.promethean.peer-demo.PeerDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeerDemo.app/PeerDemo";
+			};
+			name = Debug;
+		};
+		E166AB0520DAA6E4008339FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4FLNJKGBZ5;
+				INFOPLIST_FILE = PeerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.promethean.peer-demo.PeerDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeerDemo.app/PeerDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,6 +514,15 @@
 			buildConfigurations = (
 				E143090B20CECE3C00258C67 /* Debug */,
 				E143090C20CECE3C00258C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E166AB0620DAA6E4008339FA /* Build configuration list for PBXNativeTarget "PeerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E166AB0420DAA6E4008339FA /* Debug */,
+				E166AB0520DAA6E4008339FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
