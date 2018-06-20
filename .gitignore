@@ -1,0 +1,5 @@
+*.echo.lock
+*.xcworkspace
+Pods
+Podfile.lock
+*.log

@@ -1,0 +1,6 @@
+framework module Peer5Kit {
+  umbrella header "Peer5Kit.h"
+
+  export *
+  module * { export * }
+}

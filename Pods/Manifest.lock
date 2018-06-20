@@ -1,0 +1,16 @@
+PODS:
+  - Peer5Kit (1.1.18)
+
+DEPENDENCIES:
+  - Peer5Kit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Peer5Kit
+
+SPEC CHECKSUMS:
+  Peer5Kit: 9f496b7ed87437643599da22f1f5764b581b2531
+
+PODFILE CHECKSUM: 9d7480fd77969352af7759e4b8f51e29d4e8b012
+
+COCOAPODS: 1.5.2
