@@ -14,7 +14,6 @@ default_platform(:ios)
 platform :ios do
   desc "Runs all the tests"
   lane :test do
-      devices: ["iPad Air"]
-      scheme: "PeerDemo"
+      scan
   end
 end
