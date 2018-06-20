@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - checkout
+      - run: ruby -v
       - run: git submodule sync
       - run: git submodule update --init --remote
       - run:
