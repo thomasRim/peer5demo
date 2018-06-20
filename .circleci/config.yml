@@ -11,15 +11,18 @@ jobs:
       xcode: "9.2.0"
     shell: /bin/bash --login -eo pipefail
 
-    dependencies:
-       pre:
-        - echo "2.3.1" > .ruby-version
+    # dependencies:
+    #    pre:
+    #     - echo "2.3.1" > .ruby-version
 
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
       - checkout
+      - run:
+            name: Set Ruby Version
+            command:  echo "ruby-2.4" > ~/.ruby-version
       - run: ruby -v
       - run:
           name: Install CocoaPods
