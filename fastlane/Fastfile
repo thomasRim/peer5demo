@@ -14,6 +14,10 @@ default_platform(:ios)
 platform :ios do
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      devices: [
+        id: "BCAA58BF-918F-47CA-A529-8D848237F5B6"
+      ]
+    )
   end
 end
