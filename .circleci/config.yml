@@ -7,9 +7,6 @@ jobs:
   build-and-test:
 
     # Specify the Xcode version to use
-    docker:
-      - image: circleci/ruby:2.4-node
-
     macos:
       xcode: "9.2.0"
 
