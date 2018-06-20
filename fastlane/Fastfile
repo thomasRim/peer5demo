@@ -16,7 +16,7 @@ platform :ios do
   lane :test do
     scan(
       devices: [
-        id: "BCAA58BF-918F-47CA-A529-8D848237F5B6"
+        "iPad Air (11.2)"
       ]
     )
   end
