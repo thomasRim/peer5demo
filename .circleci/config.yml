@@ -19,8 +19,8 @@ jobs:
         - run:
             name: Lang prepare
             command: |
-                bundle exec export LC_ALL=en_US.UTF-8  
-                bundle exec export LANG=en_US.UTF-8 
+                bundle export LC_ALL=en_US.UTF-8  
+                bundle export LANG=en_US.UTF-8 
         - run: bundle install --path vendor/bundle
         - restore_cache:
             key: 1-gems-{{ checksum "~/Gemfile.lock" }}
