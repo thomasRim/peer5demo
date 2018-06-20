@@ -9,20 +9,18 @@ jobs:
     # Specify the Xcode version to use
     macos:
       xcode: "9.2.0"
-      pre:
-        - - echo "2.3.1" > .ruby-version
     shell: /bin/bash --login -eo pipefail
 
-    # dependencies:
-    #    pre:
-    #     - echo "2.3.1" > .ruby-version
+    dependencies:
+       pre:
+        - echo "2.3.1" > .ruby-version
 
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
       - checkout
-      - run: bundle exec ruby -v
+      - run: ruby -v
       - run:
           name: Install CocoaPods
           command: |
