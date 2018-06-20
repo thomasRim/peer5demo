@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build-and-test:
 
     # Specify the Xcode version to use
     docker:
@@ -13,7 +13,6 @@ jobs:
     macos:
       xcode: "9.2.0"
 
-    working_directory: /Users/distiller/project
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
@@ -67,3 +66,9 @@ jobs:
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+
+workflows:
+  version: 2
+  build-test-adhoc:
+    jobs:
+      - build-and-test
