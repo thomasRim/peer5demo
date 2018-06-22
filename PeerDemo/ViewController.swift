@@ -12,7 +12,7 @@ import AVKit
 
 class ViewController: UIViewController {
 
-    let peer = Peer5Sdk.init(token: "yqxmmt7dmk7fr915rqcw")
+    let peer = Peer5Sdk.init(token: "yqxmmt7dmk7fr915rqcw") 
     let avPlayer = AVPlayer()
     var avPlayerLayer: AVPlayerLayer?
     
